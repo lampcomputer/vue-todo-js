@@ -1,9 +1,8 @@
 <template>
   <div>
     <div>
-
-    <h1 class="mt-4 text-center">TODO LIST</h1>
-    <todo-form />
+      <h1 class="mt-4 text-center">TODO LIST</h1>
+      <todo-form />
     </div>
   </div>
 </template>

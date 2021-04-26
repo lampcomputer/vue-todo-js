@@ -2,9 +2,9 @@
   <div>
     <b-container>
       <b-input-group>
-        <b-form-input type="text" />
+        <b-form-input type="text" v-model="value" />
         <b-input-group-append>
-          <b-button>送信</b-button>
+          <b-button @click="todoValue()">送信</b-button>
         </b-input-group-append>
       </b-input-group>
     </b-container>
@@ -13,7 +13,17 @@
 
 <script>
   export default {
-    name: 'TodoForm'
+    name: 'TodoForm',
+    data() {
+      return {
+        value: ''
+      }
+    },
+    methods: {
+      todoValue() {
+        console.log(this.value);
+      }
+    }
   }
 </script>
 
