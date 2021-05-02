@@ -4,7 +4,7 @@
       <b-input-group>
         <b-form-input type="text" v-model="value" />
         <b-input-group-append>
-          <b-button @click="todoValue()">送信</b-button>
+          <b-button @click="handleAddTodo()" variant="dark">送信</b-button>
         </b-input-group-append>
       </b-input-group>
     </b-container>
@@ -14,14 +14,14 @@
 <script>
   export default {
     name: 'TodoForm',
-    data() {
+    handleAddTodo() {
       return {
         value: ''
       }
     },
     methods: {
-      todoValue() {
-        console.log(this.value);
+      handleAddTodo() {
+        this.$emit('handleParentsAddTodo', this.value)
       }
     }
   }
